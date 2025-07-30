@@ -25,7 +25,23 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      []
+      - name: test-db
+
+  - name: test-db-deployer
+    type: hdb
+    path: db
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: custom
+      commands:
+        - npm run build
+    requires:
+      - name: test-db
 
 resources:
-  []
+  - name: test-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
