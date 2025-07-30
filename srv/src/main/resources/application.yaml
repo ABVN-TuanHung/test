@@ -6,6 +6,12 @@ spring:
 cds:
   data-source.auto-config.enabled: false
 ---
+spring:
+  config.activate.on-profile: cloud
+cds:
+  index-page:
+    enabled: true
+---
 management:
   endpoint:
     health:
