@@ -1,6 +1,76 @@
-<mvc:View controllerName="project1.controller.View1"
+<mvc:View
+    controllerName="project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table
+                id="table"
+                items="{/Employees}"
+            >
+                <columns>
+                    <Column id="col1">
+                        <Text
+                            id="col1txt"
+                            text="ID"
+                        />
+                    </Column>
+                    <Column id="col2">
+                        <Text
+                            id="col2txt"
+                            text="Name"
+                        />
+                    </Column>
+                    <Column id="col3">
+                        <Text
+                            id="col3txt"
+                            text="Age"
+                        />
+                    </Column>
+                    <Column id="col4">
+                        <Text
+                            id="col4txt"
+                            text="Hobby"
+                        />
+                    </Column>
+                    <Column id="col5">
+                        <Text
+                            id="col5txt"
+                            text="Remark"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="colistItems">
+                        <cells>
+                            <Text
+                                id="col1Item"
+                                text="{id}"
+                            />
+                            <Text
+                                id="col2Item"
+                                text="{name}"
+                            />
+                            <Text
+                                id="col3Item"
+                                text="{age}"
+                            />
+                            <Text
+                                id="col4Item"
+                                text="{hobby}"
+                            />
+                            <Text
+                                id="col5Item"
+                                text="{note}"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>
