@@ -1,0 +1,6 @@
+#### mvn com.sap.cds:cds-maven-plugin:add -Dfeature=CF
+Following the "Grow As You Go" principle, the generated CAP Java project doesn't contain support for Cloud Foundry as the target platform.
+To enhance your project with dependencies required for Cloud Foundry, execute the goal add of the CDS Maven plugin using the above command.
+
+
+####
