@@ -1,6 +1,6 @@
 namespace db;
 
-entity employees {
+entity Employees {
     key id    : String(10);
         name  : String(50);
         age   : Int16;
